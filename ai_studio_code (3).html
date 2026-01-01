@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Burn With Bill Coaching | Online Body Transformation</title>
+    <style>
+        /* 
+        DESIGN SYSTEM 
+        Colors: Dark Background (#0a0a0a), Card Background (#161616), Accent (#FF6600)
+        Typography: System Sans-Serif
+        */
+
+        :root {
+            --bg: #0a0a0a;
+            --surface: #161616;
+            --accent: #FF6600;
+            --accent-hover: #e65c00;
+            --text-primary: #ffffff;
+            --text-secondary: #a0a0a0;
+            --border: #262626;
+            --container-width: 1100px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg);
+            color: var(--text-primary);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* TYPOGRAPHY */
+        h1, h2, h3 {
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: -0.02em;
+            line-height: 1.1;
+        }
+
+        .accent-text { color: var(--accent); }
+
+        /* COMMON COMPONENTS */
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .section-padding {
+            padding: 100px 0;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 1.25rem 2.5rem;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            border: none;
+            text-align: center;
+        }
+
+        .btn-primary {
+            background-color: var(--accent);
+            color: #000;
+        }
+
+        .btn-primary:hover {
+            background-color: var(--accent-hover);
+            transform: translateY(-2px);
+        }
+
+        .btn-secondary {
+            background-color: transparent;
+            color: #fff;
+            border: 1px solid var(--border);
+        }
+
+        .btn-secondary:hover {
+            background-color: #fff;
+            color: #000;
+        }
+
+        /* 1. HERO SECTION */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            padding-top: 80px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1.2fr 0.8fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .hero h1 {
+            font-size: clamp(2.5rem, 6vw, 4.5rem);
+            margin-bottom: 1.5rem;
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            color: var(--text-secondary);
+            margin-bottom: 2.5rem;
+            max-width: 600px;
+        }
+
+        .hero-btns {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .hero-image-area {
+            width: 100%;
+            height: 600px;
+            background-color: var(--surface);
+            border: 1px solid var(--border);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+
+        /* 2. SOCIAL PROOF SECTION */
+        .social-proof {
+            background-color: #000;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 4rem;
+        }
+
+        .transform-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .transform-item {
+            aspect-ratio: 1 / 1;
+            background-color: var(--surface);
+            border: 1px solid var(--border);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 1rem;
+        }
+
+        /* 3. HOW IT WORKS SECTION */
+        .how-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2.5rem;
+        }
+
+        .how-card {
+            background-color: var(--surface);
+            padding: 3rem;
+            border-bottom: 4px solid var(--accent);
+        }
+
+        .step-num {
+            font-size: 0.85rem;
+            font-weight: 700;
+            color: var(--accent);
+            display: block;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+        }
+
+        .how-card h3 {
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+
+        /* 4. WHO THIS IS FOR SECTION */
+        .audience-box {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2px;
+            background-color: var(--border);
+            border: 1px solid var(--border);
+        }
+
+        .audience-pane {
+            background-color: var(--bg);
+            padding: 4rem;
+        }
+
+        .audience-pane h3 {
+            margin-bottom: 2rem;
+            font-size: 1.75rem;
+        }
+
+        .bullet-list {
+            list-style: none;
+        }
+
+        .bullet-list li {
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+        }
+
+        .bullet-list li::before {
+            content: "→";
+            color: var(--accent);
+            font-weight: 900;
+        }
+
+        /* 5. TESTIMONIALS SECTION */
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .testimonial-card {
+            padding: 2.5rem;
+            background-color: var(--surface);
+            border-left: 1px solid var(--accent);
+            font-style: italic;
+            color: var(--text-secondary);
+        }
+
+        /* 6. ABOUT SECTION */
+        .about-flex {
+            display: flex;
+            gap: 5rem;
+            align-items: center;
+        }
+
+        .about-img {
+            flex: 1;
+            background-color: var(--surface);
+            height: 500px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid var(--border);
+        }
+
+        .about-content {
+            flex: 1.5;
+        }
+
+        .about-content h2 {
+            margin-bottom: 1.5rem;
+        }
+
+        /* 7. CTA SECTION */
+        .final-cta {
+            text-align: center;
+            background-color: var(--accent);
+            color: #000;
+        }
+
+        .final-cta h2 {
+            color: #000;
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            margin-bottom: 1.5rem;
+        }
+
+        .final-cta p {
+            color: #000;
+            font-weight: 600;
+            margin-bottom: 2.5rem;
+        }
+
+        .btn-dark {
+            background-color: #000;
+            color: #fff;
+        }
+
+        footer {
+            padding: 40px 0;
+            text-align: center;
+            font-size: 0.8rem;
+            color: var(--text-secondary);
+            border-top: 1px solid var(--border);
+        }
+
+        /* MOBILE RESPONSIVE */
+        @media (max-width: 992px) {
+            .hero-grid, .about-flex, .audience-box {
+                grid-template-columns: 1fr;
+                display: block;
+            }
+            .hero-image-area, .about-img {
+                margin-top: 3rem;
+                height: 400px;
+            }
+            .hero-btns {
+                flex-direction: column;
+            }
+            .audience-pane {
+                padding: 2.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 1. HERO SECTION -->
+    <section class="hero">
+        <div class="container hero-grid">
+            <div class="hero-content">
+                <h1>LOSE FAT. <br><span class="accent-text">KEEP YOUR WEEKENDS.</span></h1>
+                <p>High-performance online body transformation coaching for gym-goers who want serious results without extreme dieting or giving up their social life.</p>
+                <div class="hero-btns">
+                    <a href="#apply" class="btn btn-primary">Apply For Coaching</a>
+                    <a href="#transformations" class="btn btn-secondary">View Transformations</a>
+                </div>
+            </div>
+            <div class="hero-image-area">
+                <!-- Replace with hero image of Billy Wraight -->
+                <span style="color: #444; font-weight: 800; text-transform: uppercase;">Billy Wraight Placeholder</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- 2. SOCIAL PROOF SECTION -->
+    <section id="transformations" class="section-padding social-proof">
+        <div class="container">
+            <h2 class="section-title">REAL CLIENT <span class="accent-text">TRANSFORMATIONS</span></h2>
+            <div class="transform-grid">
+                <div class="transform-item">
+                    <!-- Replace with real before/after image -->
+                    <span style="color: #444; font-size: 0.8rem; font-weight: 700;">BEFORE / AFTER PHOTO</span>
+                </div>
+                <div class="transform-item">
+                    <!-- Replace with real before/after image -->
+                    <span style="color: #444; font-size: 0.8rem; font-weight: 700;">BEFORE / AFTER PHOTO</span>
+                </div>
+                <div class="transform-item">
+                    <!-- Replace with real before/after image -->
+                    <span style="color: #444; font-size: 0.8rem; font-weight: 700;">BEFORE / AFTER PHOTO</span>
+                </div>
+                <div class="transform-item">
+                    <!-- Replace with real before/after image -->
+                    <span style="color: #444; font-size: 0.8rem; font-weight: 700;">BEFORE / AFTER PHOTO</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. HOW IT WORKS SECTION -->
+    <section class="section-padding">
+        <div class="container">
+            <h2 class="section-title">THE <span class="accent-text">SYSTEM</span></h2>
+            <div class="how-grid">
+                <div class="how-card">
+                    <span class="step-num">Step 01</span>
+                    <h3>The Training Structure</h3>
+                    <p>No more "winging it" in the gym. You'll get a precision-based training plan designed to build an athletic physique while working around your schedule.</p>
+                </div>
+                <div class="how-card">
+                    <span class="step-num">Step 02</span>
+                    <h3>Lifestyle Nutrition</h3>
+                    <p>Learn how to lose body fat while still eating at restaurants and enjoying your weekends. No extreme restriction, just effective data-driven protocols.</p>
+                </div>
+                <div class="how-card">
+                    <span class="step-num">Step 03</span>
+                    <h3>Radical Accountability</h3>
+                    <p>I am with you every step of the way. Through weekly check-ins and direct support, we solve problems before they become plateaus.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. WHO THIS IS FOR SECTION -->
+    <section class="section-padding" style="padding-bottom: 0;">
+        <div class="container">
+            <div class="audience-box">
+                <div class="audience-pane">
+                    <h3>WHO THIS <span class="accent-text">IS FOR</span></h3>
+                    <ul class="bullet-list">
+                        <li>Everyday adults ready to commit to a long-term change.</li>
+                        <li>Gym-goers who are tired of working hard but not seeing the scale move.</li>
+                        <li>People who want to lose fat without giving up social occasions.</li>
+                        <li>Individuals who value professional structure and accountability.</li>
+                    </ul>
+                </div>
+                <div class="audience-pane">
+                    <h3>WHO THIS <span class="accent-text">IS NOT</span></h3>
+                    <ul class="bullet-list">
+                        <li>Anyone looking for a "magic pill" or 30-day quick fix.</li>
+                        <li>People unwilling to track their data and follow a plan.</li>
+                        <li>Individuals looking for extreme, unsustainable starvation diets.</li>
+                        <li>Anyone who avoids responsibility for their own progress.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. TESTIMONIALS SECTION -->
+    <section class="section-padding">
+        <div class="container">
+            <h2 class="section-title">CLIENT <span class="accent-text">FEEDBACK</span></h2>
+            <div class="testimonial-grid">
+                <div class="testimonial-card">
+                    <p>“Client testimonial goes here”</p>
+                    <!-- Replace with verified client testimonial -->
+                </div>
+                <div class="testimonial-card">
+                    <p>“Client testimonial goes here”</p>
+                    <!-- Replace with verified client testimonial -->
+                </div>
+                <div class="testimonial-card">
+                    <p>“Client testimonial goes here”</p>
+                    <!-- Replace with verified client testimonial -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. ABOUT THE COACH SECTION -->
+    <section class="section-padding" style="background-color: #000;">
+        <div class="container about-flex">
+            <div class="about-img">
+                <!-- Replace with photo of Billy Wraight -->
+                <span style="color: #444; font-weight: 800; text-transform: uppercase;">Billy Wraight Profile</span>
+            </div>
+            <div class="about-content">
+                <h2>MEET THE COACH: <br><span class="accent-text">BILLY WRAIGHT</span></h2>
+                <p>I specialize in helping everyday people navigate the complexities of online body transformation. My approach is rooted in science but applied with common sense.</p>
+                <p style="margin-top: 1rem;">I founded Burn With Bill Coaching to bridge the gap between "hard work" and "actual results." We don't do fads, we don't do gimmicks—we just build lean, confident physiques through sustainable systems.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. CALL TO ACTION SECTION -->
+    <section id="apply" class="section-padding final-cta">
+        <div class="container">
+            <h2>START YOUR TRANSFORMATION</h2>
+            <p>Ready to lose the body fat and keep it off for good? I am currently accepting serious applicants.</p>
+            <a href="#" class="btn btn-dark">Apply For Coaching Now</a>
+            <p style="margin-top: 1.5rem; font-size: 0.9rem; opacity: 0.8;">Only limited coaching spots are available to ensure elite service levels.</p>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 BURN WITH BILL COACHING. ALL RIGHTS RESERVED.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
