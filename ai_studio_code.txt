@@ -1,0 +1,150 @@
+<!-- 1. Hero Section -->
+<header class="hero section">
+    <div class="container">
+        <div class="hero-grid">
+            <div class="hero-content">
+                <h1>RECLAIM YOUR <span class="orange">CONFIDENCE</span> WITHOUT GIVING UP YOUR WEEKENDS.</h1>
+                <p>Expert online transformation coaching for gym-goers who want serious fat loss results without extreme dieting or living out of Tupperware.</p>
+                <div class="btn-group">
+                    <a href="#apply" class="btn btn-primary">Apply For Coaching</a>
+                    <a href="#transformations" class="btn btn-secondary">View Transformations</a>
+                </div>
+            </div>
+            <div class="hero-image-placeholder">
+                <!-- Replace with hero image of Billy Wraight -->
+                <p style="color:#444">Billy Wraight Hero Image</p>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- 2. Social Proof Section -->
+<section id="transformations" class="social-proof section">
+    <div class="container">
+        <h2>Real Client <span class="orange">Transformations</span></h2>
+        <div class="transformations-grid">
+            <div class="transformation-item">
+                <!-- Replace with real before/after image -->
+                <p style="color:#444">Before / After #1</p>
+            </div>
+            <div class="transformation-item">
+                <!-- Replace with real before/after image -->
+                <p style="color:#444">Before / After #2</p>
+            </div>
+            <div class="transformation-item">
+                <!-- Replace with real before/after image -->
+                <p style="color:#444">Before / After #3</p>
+            </div>
+            <div class="transformation-item">
+                <!-- Replace with real before/after image -->
+                <p style="color:#444">Before / After #4</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- 3. How It Works Section -->
+<section class="section">
+    <div class="container">
+        <h2>The <span class="orange">System</span></h2>
+        <div class="how-works-grid">
+            <div class="step-card">
+                <span class="step-num">01</span>
+                <h3>Precision Training</h3>
+                <p>A training structure built around your lifestyle. No more mindless hours in the gym—we focus on high-impact movements that build a lean, athletic physique effectively.</p>
+            </div>
+            <div class="step-card">
+                <span class="step-num">02</span>
+                <h3>Flexible Nutrition</h3>
+                <p>Lose fat without extreme restriction. I show you how to manage your nutrition so you can still enjoy meals out and socialise without ruining your progress.</p>
+            </div>
+            <div class="step-card">
+                <span class="step-num">03</span>
+                <h3>Elite Accountability</h3>
+                <p>Direct support and regular check-ins to ensure you stay on track. We solve problems as they arise so you never feel lost or stuck.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- 4. Who This Is For Section -->
+<section class="section">
+    <div class="container">
+        <div class="audience-grid">
+            <div class="audience-box">
+                <h3>Who This <span class="orange">Is For</span></h3>
+                <ul class="audience-list">
+                    <li>Everyday adults ready to commit to a structured plan.</li>
+                    <li>Gym-goers who are working hard but not seeing the scale move.</li>
+                    <li>People who want to lose fat while keeping their social life intact.</li>
+                    <li>Those tired of "quick fixes" and looking for long-term habits.</li>
+                </ul>
+            </div>
+            <div class="audience-box">
+                <h3>Who This <span class="orange">Is NOT For</span></h3>
+                <ul class="audience-list not-for">
+                    <li>People looking for a "magic pill" or overnight results.</li>
+                    <li>Those unwilling to track their progress or follow data.</li>
+                    <li>Individuals looking for extreme, unsustainable starvation diets.</li>
+                    <li>Anyone not ready to take ownership of their training and nutrition.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- 5. Testimonials Section -->
+<section class="section social-proof">
+    <div class="container">
+        <h2>Verified <span class="orange">Feedback</span></h2>
+        <div class="testimonials-grid">
+            <div class="testimonial-card">
+                <p>“Client testimonial goes here”</p>
+                <!-- Replace with verified client testimonial -->
+            </div>
+            <div class="testimonial-card">
+                <p>“Client testimonial goes here”</p>
+                <!-- Replace with verified client testimonial -->
+            </div>
+            <div class="testimonial-card">
+                <p>“Client testimonial goes here”</p>
+                <!-- Replace with verified client testimonial -->
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- 6. About The Coach Section -->
+<section class="section">
+    <div class="container">
+        <div class="about-grid">
+            <div class="about-image-placeholder">
+                <!-- Replace with photo of Billy Wraight -->
+                <p style="color:#444">Billy Wraight Profile</p>
+            </div>
+            <div class="about-content">
+                <h2>Meet Your Coach: <span class="orange">Billy Wraight</span></h2>
+                <p>As the founder of Burn With Bill Coaching, I specialize in helping adults navigate the complexities of body transformation in the real world.</p>
+                <p>I focus on bridge the gap between "hard work" and "actual results" by providing the structure and science needed for fat loss, without the misery of extreme dieting.</p>
+                <p>My mission is to help you build a body you're proud of while maintaining a lifestyle you actually enjoy.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- 7. Call To Action Section -->
+<section id="apply" class="final-cta">
+    <div class="container">
+        <h2>Start Your <span class="orange">Transformation</span></h2>
+        <p style="margin-bottom: 40px; font-size: 1.1rem;">Ready to burn fat and build lasting confidence? Apply today to see if you're a fit for the program.</p>
+        <a href="#" class="btn btn-primary">Apply Now</a>
+        <p class="cta-subtext">Serious inquiries only. Limited coaching spots available to ensure high-quality support.</p>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer style="padding: 40px 0; text-align: center; border-top: 1px solid #222; font-size: 0.8rem; color: #666;">
+    <div class="container">
+        <p>&copy; 2026 Burn With Bill Coaching. All Rights Reserved.</p>
+    </div>
+</footer>
